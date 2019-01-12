@@ -9,6 +9,13 @@ node {
 
      checkout scm
 
+     stage ('Check params') {
+        when {
+           expression { params.submodule }
+           }
+           println params.name
+     }
+
      stage ('Print workspace directory content'){
          def output = sh returnStdout: true, script: 'ls -a'
          println output
