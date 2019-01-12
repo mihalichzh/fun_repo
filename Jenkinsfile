@@ -34,7 +34,7 @@ pipeline {
     stages {
             stage('Test') {
                 steps {
-                    sh 'java -version'
+                    sh 'java -jar fun-1.0-SNAPSHOT-tests.jar -p myTests'
                       }
                 }
             }
