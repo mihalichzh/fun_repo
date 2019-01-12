@@ -20,6 +20,11 @@ node {
         sh './gradlew testJar'
      }
 
+     stage ('Print workspace directory content after jar composed'){
+              def output = sh returnStdout: true, script: 'ls -a'
+              println output
+     }
+
      stage ('Run tests from .jar'){
         sh 'java -jar ./build/libs/fun-1.0-SNAPSHOT-tests.jar -p myTests --disable-ansi-colors'
      }
