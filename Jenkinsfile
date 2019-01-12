@@ -11,7 +11,7 @@ node {
          sh './gradlew test'
      }
 
-     stage ('Print current bramch name'){
+     stage ('Print current branch name'){
         println env.BRANCH_NAME
      }
 }
