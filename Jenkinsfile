@@ -34,7 +34,7 @@ pipeline {
     stages {
             stage('Test') {
                 steps {
-                    sh 'ls'
+                    sh 'uname -a'
                       }
                 }
             }
