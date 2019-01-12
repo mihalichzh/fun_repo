@@ -16,6 +16,6 @@ node {
      }
 
      stage ('Run tests from .jar'){
-        sh 'java -version'
+        sh 'java -jar ./build/libs/fun-1.0-SNAPSHOT-tests.jar -p myTests --disable-ansi-colors'
      }
 }
