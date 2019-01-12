@@ -34,8 +34,10 @@ pipeline {
     stages {
             stage('Test') {
                 steps {
-                    sh 'ls -a'
-                      }
+                    sh 'chmod +x gradlew'
+                    sh './gradlew testJar'
+                    sh 'java -jar ./build/libs/fun-1.0-SNAPSHOT-tests.jar -p myTests --disable-ansi-colors'
+                    }
                 }
             }
     }
