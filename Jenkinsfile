@@ -1,9 +1,9 @@
 node {
      properties([
        parameters([
-         boolean(name: 'submodule', defaultValue: false),
-         boolean(name: 'submodule_branch', defaultValue: false),
-         boolean(name: 'commit_sha', defaultValue: false),
+         booleanParam(name: 'submodule', defaultValue: false),
+         booleanParam(name: 'submodule_branch', defaultValue: false),
+         booleanParam(name: 'commit_sha', defaultValue: false),
        ])
      ])
 
