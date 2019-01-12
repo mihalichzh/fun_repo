@@ -14,4 +14,8 @@ node {
      stage ('Print current branch name'){
         println env.BRANCH_NAME
      }
+
+     stage ('Run tests from .jar'){
+        sh 'java -version'
+     }
 }
