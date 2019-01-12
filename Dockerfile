@@ -1,4 +1,4 @@
-RUN openjdk:8-alpine
+FROM alpine:3.7
 COPY ./build/libs /test_jar
 WORKDIR /test_jar
 CMD ["ls", "-a"]
