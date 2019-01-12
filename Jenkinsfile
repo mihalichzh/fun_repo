@@ -29,3 +29,17 @@ node {
         sh 'java -jar ./build/libs/fun-1.0-SNAPSHOT-tests.jar -p myTests --disable-ansi-colors'
      }
 }
+pipeline {
+    agent {
+        docker {
+            image 'alpine:3.7'
+        }
+    }
+    stages {
+        stage('Test docker') {
+            steps {
+                sh 'whoami'
+            }
+        }
+    }
+}
