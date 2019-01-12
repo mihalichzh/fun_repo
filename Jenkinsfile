@@ -10,4 +10,8 @@ node {
          sh 'chmod +x gradlew'
          sh './gradlew test'
      }
+
+     stage ('Print current bramch name'){
+        println env.BRANCH_NAME
+     }
 }
