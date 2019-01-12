@@ -11,7 +11,7 @@ node {
 
      stage ('Check params') {
         if (params.submodule) {
-           println parameters
+           println 'Helllo!'
         }
      }
 
