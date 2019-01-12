@@ -10,10 +10,9 @@ node {
      checkout scm
 
      stage ('Check params') {
-        when {
-           expression { params.submodule }
-           }
+        if (params.submodule) {
            println params.name
+        }
      }
 
      stage ('Print workspace directory content'){
