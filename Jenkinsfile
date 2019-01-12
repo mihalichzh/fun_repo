@@ -1,3 +1,11 @@
+properties([
+  parameters([
+    boolean(name: 'submodule', defaultValue: false),
+    boolean(name: 'submodule_branch', defaultValue: false),
+    boolean(name: 'commit_sha', defaultValue: false),
+  ])
+])
+
 node {
      checkout scm
 
