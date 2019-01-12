@@ -15,6 +15,11 @@ node {
         println env.BRANCH_NAME
      }
 
+     stage ('Create executable .jar test file'){
+             sh 'chmod +x gradlew'
+             sh './gradlew testJar'
+     }
+
      stage ('Print workspace directory content after jar composed'){
                    def output = sh returnStdout: true, script: 'ls -a'
                    println output
