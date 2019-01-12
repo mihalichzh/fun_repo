@@ -30,16 +30,13 @@ node {
      }
 }
 pipeline {
-    agent {
-        docker {
-            image 'alpine:3.7'
-        }
-    }
+    agent {dockerfile true}
     stages {
-        stage('Test docker') {
-            steps {
-                sh 'whoami'
+            stage('Test') {
+                steps {
+                    sh 'ls'
+                      }
+                }
             }
-        }
     }
 }
