@@ -34,7 +34,7 @@ pipeline {
     stages {
             stage('Test') {
                 steps {
-                    sh 'uname -a'
+                    sh 'java -version'
                       }
                 }
             }
