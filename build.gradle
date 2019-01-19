@@ -44,4 +44,18 @@ test {
     useJUnitPlatform()
 }
 
+task myCustomTask(type: Exec) {
+    print 'Hello'
+    commandLine 'cmd', 'echo', 'hello world!'
+    standardOutput = new ByteArrayOutputStream()
+    println standardOutput
+}
+
+myCustomTask << {
+    print 'World'
+}
+
+myCustomTask << {
+    print 'And Again'
+}
 
