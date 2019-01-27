@@ -11,7 +11,7 @@ node {
         sh './gradlew testJar'
     }
 
-    stage('Run tests from .jar') {
-        sh 'java -jar ./build/libs/fun-1.0-SNAPSHOT-tests.jar -p myTests --disable-ansi-colors'
+    stage('Copy tests jar to the root') {
+        sh 'cp ./build/libs/fun-1.0-SNAPSHOT-tests.jar .'
     }
 }
