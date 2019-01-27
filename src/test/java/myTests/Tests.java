@@ -1,22 +1,18 @@
 package myTests;
 
+import helpers.FileHelper;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 public class Tests {
-    @Test
-    void testPositive() {
-        Assertions.assertEquals(5, 5);
-    }
 
     @Test
-    void testNegative() {
-        Assertions.assertEquals(5, 5);
+    void testFileExists() {
+        File file = new File(FileHelper.getCurrentFolder(),"test.txt");
+        Assertions.assertTrue(file.exists());
+
     }
 
-    @Test
-    void testAssumptionError() {
-        Assumptions.assumeFalse(2 > 1);
-    }
 }
