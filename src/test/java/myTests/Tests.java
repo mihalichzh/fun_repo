@@ -11,8 +11,7 @@ public class Tests {
     @Test
     void testFileExists() {
         File file = new File(FileHelper.getCurrentFolder(),"test.txt");
+        System.out.println(FileHelper.getCurrentFolder());
         Assertions.assertTrue(file.exists());
-
     }
-
 }
